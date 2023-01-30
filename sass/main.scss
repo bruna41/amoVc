@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+body {
+    background-color: #e74848;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #e74848;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #e74848;
+        border-radius: 10px;
+        border: 2px solid #e74848;
+    }
+}
+
+audio{
+    &::-webkit-media-controls-timeline {
+        display: flex;
+    }
+
+    &::-webkit-media-controls-panel {
+        background-color: #ca1515;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.iniciar {
+    padding: 7px;
+    width: 70px;
+    color: #f0f8ff;
+    text-align: center;
+    background-color: #b80505;
+    box-shadow: -2px 2px 0px 0rem rgba(88, 61, 61, 0.2);
+    border: none;
+    border-radius: 8px;
+
+    &:hover {
+        background-color: #de0707;
+        box-shadow: 1px 1px 0px 0rem rgba(88, 61, 61, 0.2);
+    }
+}
+
+.mae {
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    .box {
+        width: 500px;
+        height: fit-content;
+        padding: 20px;
+        background-color: #08080845;
+        border-radius: 20px;
+    }
+
+    .textos {
+        text-align: center;
+        font-size: 17px;
+        color: black;
+    }
+
+    .love {
+        font-size: 50px;
+        color: #580246;
+    }
+}
+
+.doisCliques {
+    color: #000;
+    margin-top: -13px;
+}
+
+#textao {
+    &::after {
+        content: '|';
+        margin-left: 0px;
+        opacity: 1;
+        color: #000;
+        animation: pisca .9s infinite;
+    }
+}
+
+@keyframes pisca {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.caveiras {
+    margin-top: -30px;
+    transform: scale(.8);
+}
+
+.fa-heart {
+    color: #580246;
+}
+
+.loveMe {
+    height: 670px;
+    width: 390px;
+    background: url('https://i.pinimg.com/564x/bc/d1/21/bcd12131a5bf13db42583de82376f170.jpg') no-repeat center center/cover;
+    margin: auto;
+    cursor: pointer;
+    max-width: 100%;
+    position: relative;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    overflow: hidden;
+}
+
+.loveMe {
+    .fa-heart {
+        position: absolute;
+        animation: grow 0.6s linear;
+        transform: translate(-50%, -50%) scale(0);
+    }
+} 
+
+@keyframes grow {
+    to {
+        transform: translate(-50%, -50%) scale(10);
+        opacity: 0;
+    }
+}
